@@ -1,0 +1,86 @@
+// 引入element-plus样式表
+import "element-plus/lib/theme-chalk/index.css"
+import 'element-plus/lib/theme-chalk/display.css'
+import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
+
+// 按需引入element-plus插件
+import { 
+  ElButton,
+  ElForm,
+  ElInput, 
+  ElSelect,
+  ElOption,
+  ElContainer,
+  ElHeader,
+  ElMain,
+  ElFooter,
+  ElRow,
+  ElCol,
+  ElTabPane,
+  ElTabs,
+  ElMenu,
+  ElMenuItem,
+  ElSubmenu,
+  ElMessageBox,
+  ElMessage,
+  ElAvatar,
+  ElPopover, 
+  ElDialog,
+  ElLoading,
+  ElFormItem,
+  ElButtonGroup,
+  ElSlider,
+  ElDrawer,
+  ElTable,
+  ElTableColumn,
+  ElCard,
+  ElTree,
+  ElBadge,
+  ElPagination,
+  ElCheckbox,
+  ElCheckboxGroup,
+  ElTag,
+} from 'element-plus'
+
+export default (app) => {
+  const elementPLuginList = [
+    ElButton,
+    ElButtonGroup,
+    ElForm,
+    ElFormItem,
+    ElInput,
+    ElSelect,
+    ElOption,
+    ElContainer,
+    ElHeader,
+    ElMain,
+    ElFooter,
+    ElRow,
+    ElCol,
+    ElTabPane,
+    ElTabs,
+    ElMenu,
+    ElMenuItem,
+    ElSubmenu,
+    ElMessageBox,
+    ElMessage,
+    ElAvatar,
+    ElDialog,
+    ElLoading,
+    ElPopover,
+    ElSlider,
+    ElDrawer,
+    ElTable,
+    ElTableColumn,
+    ElCard,
+    ElTree,
+    ElBadge,
+    ElPagination,
+    ElCheckbox,
+    ElCheckboxGroup,
+    ElTag,
+  ]
+  elementPLuginList.forEach((e) => {
+    app.use(e, { zhLocale })
+  })
+}
